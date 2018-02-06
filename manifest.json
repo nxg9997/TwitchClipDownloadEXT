@@ -1,0 +1,17 @@
+{
+    "name": "Twitch Clip Downloader",
+    "description" : "Downloads clips from Twitch.tv",
+    "version": "0.1",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    },
+
+    "content_scripts": [{
+        "js": ["code.js"],
+        "matches": ["*://clips.twitch.tv/*"]
+    }],
+
+    "permissions": ["tabs", "<all_urls>"]
+  }
